@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="action_github_login">登录 GitHub 帐号</string>
+    <string name="action_github_trending">今日 GitHub 热门</string>
+    <string name="action_notifiable">每天中午提醒</string>
+    <string name="action_about">可爱的「关于」页面</string>
+    <string name="tips_exit">你确定要退出吗？</string>
+    <string name="tips_yes">确定</string>
+</resources>
