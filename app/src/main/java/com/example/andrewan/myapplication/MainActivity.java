@@ -21,7 +21,6 @@ public class MainActivity extends AppCompatActivity {
     Toolbar mToolbar;
     @Bind(R.id.main_fab)
     FloatingActionButton mMainFab;
-    private Snackbar mSnack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,9 +31,6 @@ public class MainActivity extends AppCompatActivity {
         ActionBar ab = getSupportActionBar();
         ab.setHomeAsUpIndicator(R.drawable.ic_menu);
         ab.setDisplayHomeAsUpEnabled(true);
-        mToolbar.setTitleTextColor(getResources().getColor(android.R.color.white));
-
-
     }
 
 
@@ -59,23 +55,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void confirmExit() {
-        //判断2次点击的时间如果是Snackbar.LENGTH_SHORT就执行dismiss()方法
-        if (mSnack == null) {
-            mSnack = Snackbar.make(mMainFab, getString(R.string.tips_exit), Snackbar.LENGTH_SHORT).setAction(getString(R.string.tips_yes), new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    dismiss();
-                }
-            });
-            mSnack.show();
-        } else {
-            dismiss();
-        }
-    }
+        Snackbar.make(mMainFab, getString(R.string.tips_exit), Snackbar.LENGTH_SHORT).setAction(getString(R.string.tips_yes), new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
-    private void dismiss() {
-        mSnack.dismiss();
-        mSnack = null;
+            }
+        }).show();
+
+
     }
 
     @OnClick(R.id.main_fab)
