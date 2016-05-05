@@ -14,7 +14,7 @@ public class MyClass {
 //        tsetNumberFormat();
 //        System.out.println(getRandom(5,10));
         System.out.println(test());
-        //test
+        //test2
     }
 
     public static int test()
